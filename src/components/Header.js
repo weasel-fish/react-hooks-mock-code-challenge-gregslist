@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "./Search";
 
-function Header() {
+function Header({filterListings, sortListings}) {
   return (
     <header>
       <h1>
@@ -10,7 +10,8 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search filterListings={filterListings}/>
+      <button onClick={sortListings}>Sort By Location</button>
     </header>
   );
 }
